@@ -34,3 +34,13 @@ h1 {
 	font-size: 2em;
 	margin-top: 1em;
 }
+
+footer {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	background-color: #bfbaba;
+	color: #333;
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+  }
