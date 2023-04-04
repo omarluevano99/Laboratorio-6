@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Página 1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="pagina2.html">Pagina 2</a></li>
+			<li><a href="pagina3.html">Pagina 3</a></li>
+		</ul>
+	</nav>
+
+	<main class="container">
+		<h1>Componentes de una computadora</h1>
+		<div class="row">
+			<div class="col-md-4">
+				<img src="cpu.jpg" alt="Imagen 1">
+				<p>El CPU es el corazón de la computadora ya que este es el que procesa toda la información que se utiliza dentro de la misma.</p>
+            </div>
+			<div class="col-md-4">
+				<img src="ram.jpg" alt="Imagen 2">
+                <p>La memoria RAM es la memoria de acceso rápido en donde se guarda toda la información que se va utilizando en el momento por la computadora, esta memoria es volatil ya que se borra por completo después de que el equipo es apagado</p>
+			</div>
+			<div class="col-md-4">
+				<img src="hdd.jpg" alt="Imagen 3">
+                <p>El HDD es como el almacen de la computadora ya que es en donde se guarda toda la información en donde se va a trabajar y es persistente ya que toda la información se queda guardad aún después de apagar el equipo</p>
+			</div>
+		</div>
+		
+        <div class="container mt-5">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <label for="textarea" class="form-label">Escribe aquí y con la ayuda de tu CPU veremos cuantas palabras y caracteres escribiste</label>
+                  <textarea class="form-control" id="textarea" rows="5" oninput="countWords()"></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-3">
+                  <div class="card-header">
+                    <h5 class="card-title">Contador</h5>
+                  </div>
+                  <div class="card-body">
+                    <p>Palabras: <span id="word-count">0</span></p>
+                    <p>Caracteres: <span id="char-count">0</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <script>
+          function countWords() {
+            var text = document.getElementById("textarea").value;
+            var words = text.split(" ");
+            var charCount = text.length;
+            var wordCount = words.length;
+            document.getElementById("word-count").innerHTML = wordCount;
+            document.getElementById("char-count").innerHTML = charCount;
+          }
+          </script>
+          
+          
+          
+
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap"></script>
